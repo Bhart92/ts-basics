@@ -11,10 +11,15 @@ console.log(add3DCoordinate([0, 0, 0], [10, 20, 30]));
 function simpleStringState(
   initial: string
 ): [() => string, (v: string) => void] {
+  // set initial state
   let str: string = initial;
+  // return tuple
   return [
+    // return initial str
     () => str,
+    // take new str
     (v: string) => {
+      // set it to initial str var
       str = v;
     },
   ];
